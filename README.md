@@ -1,3 +1,3 @@
 # Data Fetching
 
-- Websocket
+- Server-sent events (SSE)
