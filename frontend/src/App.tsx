@@ -26,7 +26,12 @@ function App() {
       socket.off("clock", onClockEvent);
     };
   }, []);
-  return <>{clockEvents}</>;
+  return (
+    <main className="container">
+      <h1>Websocket</h1>
+      <article>{clockEvents}</article>
+    </main>
+  );
 }
 
 export default App;

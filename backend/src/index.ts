@@ -9,17 +9,9 @@ import { Server } from "socket.io";
 
 const debug = Debug("myapp");
 const app = express();
-app.use(
-  cors({
-    origin: "*", // Allow all origins
-  })
-);
+app.use(cors({ origin: false }));
 const server = createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-  },
-});
+const io = new Server(server);
 
 io.on("connection", (socket) => {
   console.log("a user connected");
