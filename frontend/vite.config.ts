@@ -5,6 +5,7 @@ const configureFn = (proxy: HttpProxy.Server, _options: ProxyOptions) => {
   proxy.on("error", (err, _req, _res) => {
     console.log("proxy error", err);
   });
+  // @ts-ignore
   proxy.on("proxyReq", (proxyReq, req, _res) => {
     console.log("Sending Request to the Target:", req.method, req.url);
   });

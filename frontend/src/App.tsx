@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { socket } from "./socket";
 function App() {
-  const [isConnected, setIsConnected] = useState(socket.connected);
+  const [_, setIsConnected] = useState(socket.connected);
   const [clockEvents, setClockEvents] = useState("");
   useEffect(() => {
     function onConnect() {
